@@ -1,0 +1,9 @@
+{
+  "name": "monke-site",
+  "version": "0.0.0",
+  "description": "MonkeSite",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

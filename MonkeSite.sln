@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MonkeSite", "MonkeSite\MonkeSite.njsproj", "{77C6CECB-C1DA-435D-8B90-39069AC41D52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C6CECB-C1DA-435D-8B90-39069AC41D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C6CECB-C1DA-435D-8B90-39069AC41D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C6CECB-C1DA-435D-8B90-39069AC41D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C6CECB-C1DA-435D-8B90-39069AC41D52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8777F7CA-05FF-4280-9DE4-368511F9A3F3}
+	EndGlobalSection
+EndGlobal
