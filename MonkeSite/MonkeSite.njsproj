@@ -30,6 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="JavaScript.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Page1.html">
       <SubType>Code</SubType>
     </Content>

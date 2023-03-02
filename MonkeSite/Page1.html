@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Oliver Fan Page</title>
 </head>
-<body bgcolor="black">
+<body bgcolor="black" onload='document.form1.text1.focus()'>
     <h1>
         <font size="32" color="white">
             The King Eating An Apple
@@ -39,14 +39,22 @@
     </p>
 
 
-    <form>
-        <font color="white">
-            <label for="oliverPassword">Password:</label>
-            <input id="olivePass" type="password" placeholder="Enter Password" />
-            <button type="submit">Submit</button>
-        </font>
+    <font color="white">
+        <div class="mail">
+            <h2>Enter Oliver Password</h2>
+            <form name="form1" action="#">
+                <ul>
+                    <li><input type='text' name='text1' /></li>
+                    <li>&nbsp;</li>
+                    <li><input type="submit" name="submit" value="Submit" onclick="alphanumeric(document.form1.text1)" /></li>
+                    <li>&nbsp;</li>
+                </ul>
+            </form>
+        </div>
+    </font>
 
-    </form>
+
+    <script src="JavaScript.js"></script>
 
 </body>
 </html>
