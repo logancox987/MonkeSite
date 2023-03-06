@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Oliver Fan Page</title>
 </head>
-<body bgcolor ="black">
+<body bgcolor="black" onload='document.form1.text1.focus()'>
     <h1>
         <font size="32" color="white">
             The King Eating An Apple
@@ -37,17 +37,24 @@
             look at that duuuuuude
         </font>
     </p>
+
+
+    <font color="white" size="48">
+        <p>
+            <a onclick="window.open('./enterName.html')"
+               href="enterName.html" target="page"> </a>
+            <button class="startGame"
+                    type="button"
+                    style="height:160px;width:480px;vertical-align:top;background-color:dimgray;font-size:xx-large;color:white;">
+                START GAME
+                </button>
+</p>
+    </font>
+
     
 
-        <form>
-            <font color="white">
-                <label for="oliverPassword">Password:</label>
-                <input id="olivePass" type="password" placeholder="Enter Password"/>
-                <button type="submit">Submit</button>
-            </font>
-            
-        </form>
 
 </body>
+
 </html>
 
