@@ -41,14 +41,16 @@
 
     <font color="white" size="48">
         <p>
-            <a onclick="window.open('./enterName.html')"
-               href="enterName.html" target="page"> </a>
-            <button class="startGame"
-                    type="button"
-                    style="height:160px;width:480px;vertical-align:top;background-color:dimgray;font-size:xx-large;color:white;">
-                START GAME
+            <a href='http://localhost:8081/' target="_blank">
+                <script>
+                    fs.writeFile('./enterName.html');
+                </script>
+                <button class="startGame"
+                        type="button"
+                        style="height:160px;width:480px;vertical-align:top;background-color:dimgray;font-size:xx-large;color:white;">
+                    START GAME
                 </button>
-</p>
+        </p>
     </font>
 
     
