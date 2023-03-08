@@ -19,20 +19,76 @@
             display: inline-block;
             cursor: pointer;
         }
+
     </style>
 </head>
 <body>
-    <p>Player 1: Unnamed</p>
+    <p>Player: Unnamed</p>
+
 
     <script>
-      const para = document.querySelector("p");
+        const para = document.querySelector("p");
 
-      para.addEventListener("click", updateName);
+        para.addEventListener("click", updateName);
 
-      function updateName() {
-        const name = prompt("Enter a new name");
-        para.textContent = `Player: ${name}`;
-      }
+        function updateName() {
+            const name = prompt("Enter a new name");
+            para.textContent = `Player: ${name}`;
+        }
+
+        var playerMoney = 50;
+
     </script>
+
+    <br style="background:rgb(255, 255, 255);color:black;border:none;box-shadow:none;display:none;border-radius:0px;cursor:default;padding:0px 0px;font-size:88px">
+        You have:
+
+
+        <script>
+            document.write(playerMoney);
+        </script>
+
+         money.
+
+    <p style="p" id="betAmountChecker">How much will you bet?</p>
+    <script>
+        const betCheck = document.getElementById("betAmountChecker");
+
+        betCheck.addEventListener("click", makeYourBet);
+
+        function makeYourBet() {
+            const betAmount = prompt("Select Number");
+            betCheck.textContent = `Bet = ${betAmount}`;
+        }
+
+        var betterPrice = betAmount;
+
+    </script>
+
+    <script>
+        var correctNumber = Math.floor(Math.random() * 100);
+    </script>
+
+    <br />
+    <!--You Bet <script>document.write(betterPrice)</script> and guessed <script>document.write(betAmount)</script>. The number was <script>document.write(correctNumber)</script>.-->
+     
+    <form id="guessNumber">
+        What number would you like to guess?: <input type="number" name="guessNumberName" value="INPUT NUMBER" id="guessNumberID"/>
+    </form>
+
+    <button onclick="goThrough()">Go through with it</button>
+
+    <p id="Results"></p>
+    <script>
+        function goThrough() {
+            alert(document.getElementById("guessNumberID"));
+            
+        }
+        
+        
+    </script>
+
+
+
 </body>
 </html>
