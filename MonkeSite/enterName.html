@@ -21,6 +21,67 @@
         }
 
     </style>
+
+
+    <script>
+        let money = 0;
+        let total = 0;
+        let bet = 0;
+        //let previousIndex = -1;
+
+        function checkBet() {
+            bet = document.getElementById('bet').value;
+            if (bet.length == 0) {
+                return;
+            }
+            
+        }
+
+
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+
+        function checkGuess() {
+            const guess = document.getElementById('guess').value;
+            if (guess.length == 0) {
+                return;
+            }
+            const number = parseInt(guess);
+            const randomNumber = getRandomNumber();
+
+            let message = '';
+            if (number === randomNumber) {
+                money += ((bet * -1) + 15);
+                message = `Dang you really got that. You currently have ${money} dollars.`;
+                //scoreDiv.innerHTML = `You have ${score} dollars, but if you actually knew what you were doing you COULD have ${total}`;
+                
+            }
+            else {
+                money -= bet;
+                message = `Wrong. ╙╥╓╘  it's actually ${randomNumber}. You currently have ${money} dollars.`;
+
+            }
+
+
+            const answerDiv = document.getElementById('answer-div');
+            answerDiv.innerHTML = message;
+
+            const scoreDiv = document.getElementById('money-div');
+            
+
+
+            if (number === randomNumber) {
+                scoreDiv.className = '';
+
+            }
+
+        }
+
+
+
+    </script>
+
 </head>
 <body>
     <p>Player: Unnamed</p>
@@ -41,16 +102,18 @@
     </script>
 
     <br style="background:rgb(255, 255, 255);color:black;border:none;box-shadow:none;display:none;border-radius:0px;cursor:default;padding:0px 0px;font-size:88px">
-        You have:
+    You have:
 
 
-        <script>
+    <!--<script>
+        function updateMoney() {
             document.write(playerMoney);
-        </script>
+        }
 
-         money.
+    </script>
 
-    <p style="p" id="betAmountChecker">How much will you bet?</p>
+    money.-->
+    <!--<p style="p" id="betAmountChecker">How much will you bet?</p>
     <script>
         const betCheck = document.getElementById("betAmountChecker");
 
@@ -63,32 +126,57 @@
 
         var betterPrice = betAmount;
 
-    </script>
-
-    <script>
-        var correctNumber = Math.floor(Math.random() * 100);
-    </script>
+    </script>-->
+    <!--<script>
+        var correctNumber = Math.floor(Math.random() * 10);
+    </script>-->
 
     <br />
     <!--You Bet <script>document.write(betterPrice)</script> and guessed <script>document.write(betAmount)</script>. The number was <script>document.write(correctNumber)</script>.-->
-     
-    <form id="guessNumber">
-        What number would you like to guess?: <input type="number" name="guessNumberName" value="INPUT NUMBER" id="guessNumberID"/>
-    </form>
-
-    <button onclick="goThrough()">Go through with it</button>
-
-    <p id="Results"></p>
+    <!--<p style="p" id="guessNumber">What number would you like to guess?</p>
     <script>
-        function goThrough() {
-            alert(document.getElementById("guessNumberID"));
-            
+        const guessCheck = document.getElementById("guessNumber");
+
+        guessCheck.addEventListener("click", makeYourGuess);
+
+        function makeYourGuess() {
+            const numberGuess = prompt("Select Number");
+            guessCheck.textContent = `Guessed Number = ${numberGuess}`;
         }
-        
-        
-    </script>
+
+    </script>-->
+    <input id="bet" type="number" min="0" max="10">
+    <button type="button" onclick="checkBet()">CONFIRM BET FIRST</button>
+    <div id="bet-div"></div>
+    <div id="response-div"></div>
 
 
+    <input id="guess" type="number" min="1" max="10">
+    <button type="button" onclick="checkGuess()">What number would you like to guess?</button>
+    <div id="answer-div"></div>
+    <div id="money-div"></div>
+
+
+
+
+
+
+    <!--<button onclick="correctAnswer()">Submit Guess</button>-->
+
+    <br />
+    <br />
+    <!--<p id="demo"></p>-->
+    <!--You Bet
+    <script>document.write(betterPrice)</script> and guessed
+    <script>document.write(betAmount)</script>. The number was
+    <script>document.write(correctNumber)</script>.-->
+    <!--<script>
+        function correctAnswer() {
+            document.getElementById("demo").innerHTML = "CORRECT!";
+            playerMoney += 5;
+            updateMoney();
+        }
+    </script>-->
 
 </body>
-</html>
+</html >
